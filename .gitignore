@@ -22,5 +22,5 @@ tmp/
 .cache/
 
 # Uploads and large files
-uploads/
-public/assists/
+
+
