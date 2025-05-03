@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Super Hit Full Movies &amp; Trailers Online on JioHotstar</title>
+    <link rel="icon" href="/assets/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body {
+  background: #000;
+  color: white;
+  font-family: sans-serif;
+  padding: 20px;
+}
+ 
+.movie-section h2 {
+  margin-bottom: 5px;
+}
+.movies-wrapper {
+  display: flex;
+  overflow-x: auto;
+  
+
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.movies-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.movie-card {
+  width: 200px;
+  height: 280px;
+  cursor: pointer;
+}
+.movie-card img {
+  width: 80%;
+  height: calc(100% - 30px);
+  border-radius: 10px;
+}
+
+
+    </style>
+    <script>
+        function toggleMenu() {
+    document.querySelector('.menu').classList.toggle('show');
+}
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="menu-container">
+          <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu" style="margin-top: 90px;">
+                <a href="/user/home"><i class="fa-solid fa-house"><span class="menu-list" >Home</span></i></a>
+                <a href="/user/search"><i class="fa-solid fa-magnifying-glass"><span class="menu-list">Search</span></i></a>
+                <a href="/user/tv-shows"><i class="fa-solid fa-tv"><span class="menu-list">TV</span></i></a>
+                <a href="/user/movies"><i class="fa-solid fa-film"><span class="menu-list">Movies</span></i></a>
+                <a href="#"><i class="fa-solid fa-person-running"><span class="menu-list">Sports</span></i></a>
+                <a href="#"><i class="fa-solid fa-newspaper"></i><span class="menu-list">News</span></a>
+                <a href="#"><i class="fa-solid fa-id-card"></i><span class="menu-list">Categories</span></a>
+                <a href="#"><img src="/assets/user.png" alt="user"></a>
+            </div>
+        </div>
+        <div class="container" style="margin-left:9%;">
+            
+            <div id="movie-sections"></div>
+        </div>
+     </div>
+     <script src="/movies.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JioHotstar - Watch TV Shows, Movies, Specials, Live Cricket &amp; Football</title>
+    <link rel="icon" href="/assets/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body style="    background-image: linear-gradient(rgb(22, 24, 31) 0%, rgb(15, 16, 20) 33.33%);">
+    <div class="main-container">
+        <div class="menu-container">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+            <div class="menu" style="margin-top: 90px;">
+                <a href="/user/home"><i class="fa-solid fa-house"><span class="menu-list"  >Home</span></i></a>
+                <a href="/user/search"><i class="fa-solid fa-magnifying-glass"><span class="menu-list" >Search</span></i></a>
+                <a href="/user/tv-shows"><i class="fa-solid fa-tv"><span class="menu-list">TV</span></i></a>
+                <a href="/user/movies"><i class="fa-solid fa-film"><span class="menu-list">Movies</span></i></a>
+                <a href="#"><i class="fa-solid fa-person-running"><span class="menu-list">Sports</span></i></a>
+                <a href="/news"><i class="fa-solid fa-newspaper"></i><span class="menu-list">News</span></a>
+                <a href="#"><i class="fa-solid fa-id-card"></i><span class="menu-list">Categories</span></a>
+                <a href="#"><img src="/assets/user.png" alt="user"></a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" class="search-input" placeholder="Movies, shows and more" />
+            <button class="search-button" >SEARCH</i></button>
+        </div>
+        <div class="search-results">
+           
+        </div>
+        <div class="footer-container">
+            <div class="main-footer">
+                 <div class="footer">
+                     <h3>Company</h3>
+                     <p>About Us</p>
+                     <p>Careers</p>
+                 </div>
+                 <div class="footer">
+                     <h3>View website in</h3>
+                     <p><span style="margin-right:7px ;">&check;</span>English</p>
+                 </div>
+                 <div class="footer">
+                     <h3>Need help</h3>
+                     <p>Visit help center</p>
+                     <p>Share Feedback</p>
+                 </div>
+                 <div class="footer">
+                     <h3>Contect with us</h3>
+                     <i class="fa-brands fa-facebook-f"></i>
+                     <i class="fa-brands fa-x-twitter"></i>
+                 </div>
+            </div>
+            <div class="copyright-container">
+                <div class="copyright-details">
+                    <p>© 2025 STAR. All Rights Reserved.</p>
+                    <p>Terms Of Use&nbsp;  &nbsp;Privacy Policy&nbsp;  &nbsp;FAQ</p>
+                </div>
+                <div class="download-link">
+                    <a href="https://play.google.com/"><img src="/assets/playstore.png" alt="Playstore"></a>
+                    <a href="https://www.apple.com/"><img src="/assets/appstore.png" alt="Appstore"></a>
+                </div>
+            </div>
+         </div>
+    </div>
+    <script src="/search.js"></script>
+    <script>
+        function toggleMenu() {
+        document.querySelector('.menu').classList.toggle('show');
+    }
+    </script>
+</body>
+</html>

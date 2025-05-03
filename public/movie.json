@@ -1,0 +1,352 @@
+{
+    "Comedy_Carnival": [
+      {
+        "title":"ted",
+        "image": "/assets/Cmovie1.jpg"
+      },
+      {
+        "title":"munjya",
+        "image": "/assets/Cmovie2.jpg"
+      },
+      {
+        "title":"govinda naam mera",
+        "image": "/assets/Cmovie3.jpg"
+      },
+      {
+        "title":"zara hatke zara bach ke",
+        "image": "/assets/Cmovie4.jpg"
+      },
+      {
+        "title":"Blackout 2024",
+        "image": "/assets/Cmovie5.jpg"
+      },
+      {
+        "title":"golmaal again",
+        "image": "/assets/Cmovie6.jpg"
+      },
+      {
+        "title":"Bhoot police",
+        "image": "/assets/Cmovie7.jpg"
+      },
+      {
+        "title":"Bhediya",
+        "image": "/assets/Cmovie8.jpg"
+      },
+      {
+        "title":"elemental",
+        "image": "/assets/Cmovie9.jpg"
+      },
+      {
+        "title":"Chhapad phaad ke",
+        "image": "/assets/Cmovie10.jpg"
+      },
+      
+      {
+        "title":"hulchul",
+        "image": "/assets/Cmovie12.jpg"
+      },
+      {
+        "title":"ponman",
+        "image": "/assets/Cmovie13.jpg"
+      },
+      {
+        "title":"carry on jatta",
+        "image": "/assets/Cmovie11.jpg"
+      }
+      
+    ],
+    "Latest_Releases": [
+        {
+            "title":"kanneda",
+            "image": "/assets/Lmovie1.jpg"
+          },
+          {
+            "title":"gangs of london",
+            "image": "/assets/Lmovie2.jpg"
+          },
+          {
+            "title":"happy face",
+            "image": "/assets/Lmovie3.jpg"
+          },
+          {
+            "title":"cockpit",
+            "image": "/assets/Lmovie4.jpg"
+          },
+          {
+            "title":"anora",
+            "image": "/assets/Lmovie5.jpg"
+          },
+          {
+            "title":"Daredevil born again",
+            "image": "/assets/Lmovie6.jpg"
+          },
+          {
+            "title":"oops ab kiya",
+            "image": "/assets/Lmovie7.jpg"
+          },
+          {
+            "title":"DELI Boys",
+            "image": "/assets/Lmovie8.jpg"
+          },
+          {
+            "title":"joker",
+            "image": "/assets/Lmovie9.jpg"
+          },
+          {
+            "title":"moana 2",
+            "image": "/assets/Lmovie10.jpg"
+          },
+          {
+            "title":"Fateh",
+            "image": "/assets/Lmovie11.jpg"
+          },
+          {
+            "title":"7 Days live",
+            "image": "/assets/Lmovie12.jpg"
+          },
+          {
+            "title":"cuttputli",
+            "image": "/assets/Amovie5.jpg"
+          }
+    ],
+    "Action_Movies": [
+          {
+            "title":"aavesham",
+            "image": "/assets/Amovie1.jpg"
+          },
+          {
+            "title":"deadpool and wolverine",
+            "image": "/assets/Amovie2.jpg"
+          },
+          {
+            "title":"sonic 2 the hedgehog",
+            "image": "/assets/Amovie3.jpg"
+          },
+          {
+            "title":"Kill",
+            "image": "/assets/Amovie4.jpg"
+          },
+          {
+            "title":"cuttputli",
+            "image": "/assets/Amovie5.jpg"
+          },
+          {
+            "title":"skyscraper",
+            "image": "/assets/Amovie6.jpg"
+          },
+          {
+            "title":"salaar",
+            "image": "/assets/Amovie7.jpg"
+          },
+          {
+            "title":"jungle cruise",
+            "image": "/assets/Amovie8.jpg"
+          },
+          {
+            "title":"A thursday",
+            "image": "/assets/Amovie9.jpg"
+          },
+          {
+            "title":"freddy",
+            "image": "/assets/Amovie10.jpg"
+          },
+          {
+            "title":"laxmi",
+            "image": "/assets/Amovie11.jpg"
+          },
+          {
+            "title":"IB71",
+            "image": "/assets/Amovie12.jpg"
+          },
+          {
+            "title":"crekk",
+            "image": "/assets/Amovie13.jpg"
+          }
+    ],
+    "Team_Marvel_And_Team_DC": [
+         {
+            "title":"Aquaman the lost kingdom",
+            "image": "/assets/Tmovie1.jpg"
+          },
+          {
+            "title":"avengers endgame",
+            "image": "/assets/Tmovie2.jpg"
+          },
+          {
+            "title":"thor the rangerok",
+            "image": "/assets/Tmovie3.jpg"
+          },
+          {
+            "title":"justice league",
+            "image": "/assets/Tmovie4.jpg"
+          },
+          {
+            "title":"the Avengers",
+            "image": "/assets/Tmovie5.jpg"
+          },
+          {
+            "title":"superman",
+            "image": "/assets/Tmovie6.jpg"
+          },
+          {
+            "title":"avengers age of ultron",
+            "image": "/assets/Tmovie7.jpg"
+          },
+          {
+            "title":"batman v superman",
+            "image": "/assets/Tmovie8.jpg"
+          },
+          {
+            "title":"Wakanda forever",
+            "image": "/assets/Tmovie9.jpg"
+          },
+          {
+            "title":"the dark knight",
+            "image": "/assets/Tmovie10.jpg"
+          },
+          {
+            "title":"iron man",
+            "image": "/assets/Tmovie11.jpg"
+          },
+          {
+            "title":"green lantern",
+            "image": "/assets/Tmovie12.jpg"
+          },
+          {
+            "title":"Doctor Strange",
+            "image": "/assets/Tmovie13.jpg"
+          }
+    ],
+    "Popular_in_Biopic":[
+          {
+            "title":"12th fail",
+            "image": "/assets/Pmovie1.jpg"
+          },
+          {
+            "title":"shabash mithu",
+            "image": "/assets/Pmovie2.jpg"
+          },
+          {
+            "title":"Ms Dhoni",
+            "image": "/assets/Pmovie3.jpg"
+          },
+          {
+            "title":"sanju",
+            "image": "/assets/Pmovie4.jpg"
+          },
+          {
+            "title":"taali",
+            "image": "/assets/Pmovie5.jpg"
+          },
+          {
+            "title":"manjhi",
+            "image": "/assets/Pmovie6.jpg"
+          },
+          {
+            "title":"super 30",
+            "image": "/assets/Pmovie7.jpg"
+          },
+          {
+            "title":"sachin tandulkar",
+            "image": "/assets/Pmovie13.jpg"
+          },
+          {
+            "title":"rocketrey",
+            "image": "/assets/Pmovie11.jpg"
+          },
+          {
+            "title":"steve jobs",
+            "image": "/assets/Pmovie10.jpg"
+          },
+          {
+            "title":"aligarh",
+            "image": "/assets/Pmovie9.jpg"
+          },
+          {
+            "title":"mery kom",
+            "image": "/assets/Pmovie8.jpg"
+          },
+          {
+            "title":"8 mils",
+            "image": "/assets/Pmovie12.jpg"
+          }
+    ],
+    "Popular_Shows":[
+        {
+            "title":"Game of Thrones: The Story So Far",
+            "image": "/assets/Smovie1.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie2.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie3.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie4.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie5.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie6.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie7.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie8.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie9.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie10.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie11.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie12.jpg"
+          },
+          {
+            
+            "image": "/assets/Smovie13.jpg"
+          }
+    ],
+    "News_Channel":[
+        {
+            "title":"India TV",
+            "channelId": "UCIRp4gfHJLpbdI1REJ-3arg",
+            "image": "/assets/IndiaTv.jpg"
+          },
+          {
+            "title":"Aaj Tak",
+            "channelId": "uLCyDrD0Bwg",
+            "image": "/assets/AajTak.jpg"
+          },
+          {
+            "title":"ABP News",
+            "channelId": "UCYPvAwZP8pZhSMW8qs7cVCw",
+            "image":  "/assets/ABPnews.jpg"
+          },
+          {
+            "title":"News Nation",
+            "channelId": "UC4SUWizzKc1tptprBkWjX2Q",
+            "image":"/assets/NewsNation.jpg"
+          }
+         
+        ]
+  }
+  

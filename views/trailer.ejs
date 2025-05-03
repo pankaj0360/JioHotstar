@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Watch Trailer</title>
+  <style>
+    body {
+      background: #0b0c0f;
+      color: white;
+      padding: 20px;
+      font-family: sans-serif;
+    }
+
+    #trailerBox {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      margin: 0 auto;
+      border: 3px solid #00b3ff;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+    @media screen and (max-width: 768px) {
+      
+        #trailerBox {
+          margin-top: 30%;
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎬 Now Playing Trailer:</h2>
+  <h1 id="movieTitle">Loading...</h1>
+
+  <div id="trailerBox">
+    <iframe id="trailerFrame" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    const apiKey = 'e672a5da20da266f2e2c153bcd39886b';
+    const title = "<%= title %>";
+
+    async function loadTrailer() {
+      try {
+        const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(title)}`);
+        const data = await res.json();
+        const movie = data.results[0];
+
+        if (!movie) {
+          document.getElementById('movieTitle').textContent = "Movie not found.";
+          return;
+        }
+
+        document.getElementById('movieTitle').textContent = movie.title;
+
+        const trailerRes = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${apiKey}`);
+        const trailerData = await trailerRes.json();
+
+        const trailer = trailerData.results.find(v => v.type === 'Trailer' && v.site === 'YouTube');
+        if (trailer) {
+          document.getElementById('trailerFrame').src = `https://www.youtube.com/embed/${trailer.key}?autoplay=1&controls=1`;
+        } else {
+          document.getElementById('trailerFrame').style.display = 'none';
+          document.getElementById('movieTitle').textContent += ' (No trailer found)';
+        }
+      } catch (err) {
+        document.getElementById('movieTitle').textContent = 'Error loading trailer.';
+        console.error(err);
+      }
+    }
+
+    loadTrailer();
+  </script>
+
+</body>
+</html>

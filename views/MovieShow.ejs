@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JioHotstar</title>
+    <link rel="icon" href="/assets/icon.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
+    
+</head>
+<body>
+    <div class="main-container">
+        <div class="menu-container">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <img src="/assets/logo.png" alt="Logo">
+            <button class="upgrade-button">Upgrade ></button>
+            <div class="menu">
+                <a href="/user/home"><i class="fa-solid fa-house"><span class="menu-list" >Home</span></i></a>
+                <a href="/user/search"><i class="fa-solid fa-magnifying-glass"><span class="menu-list" >Search</span></i></a>
+                <a href="#"><i class="fa-solid fa-tv"><span class="menu-list">TV</span></i></a>
+                <a href="/user/movies"><i class="fa-solid fa-film"><span class="menu-list">Movies</span></i></a>
+                <a href="#"><i class="fa-solid fa-person-running"><span class="menu-list">Sports</span></i></a>
+                <a href="#"><i class="fa-solid fa-newspaper"></i><span class="menu-list">News</span></a>
+                <a href="#"><i class="fa-solid fa-id-card"></i><span class="menu-list">Categories</span></a>
+                <a href="#"><img src="/assets/user.png" alt="user"></a>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            
+            <div class="content-container">
+                 <!-- <video id="main-video" class="video-background " autoplay muted >
+                    <source id="movie-video" src="assets/element.mp4" type="video/mp4">
+                </video>  -->
+                 <img class="video-background" src="<%= poster %>" alt="<%= title %>">
+                <div class="movie-details">
+                    <p id ="movie-title" style="font-family: fantasy; color: rgba(255, 255, 255, 0.925); font-size: 60px;"><%= title %></p
+                    <p class="info" id="info1" >Release Date: <%= releaseDate %> &bull; Rating: <%= rating %></p>
+                    <p id="info2"><%= description %></p>
+                    <!-- <p class="info" id="info3">Comedy | Family | Animation | Kids</p> -->
+                    <button class="watch-now" onclick="window.location.href='/user/trailer?title=<%=title%>'">Watch Now</button> 
+                </div>
+                
+            </div>
+        </div>
+        <script>
+            function toggleMenu() {
+                document.querySelector('.menu').classList.toggle('show');
+            }
+        </script>   
+</body>
+</html> 

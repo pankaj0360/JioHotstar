@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JioHotstar - Watch TV Shows, Movies, Specials, Live Cricket &amp; Football</title>
+    <link rel="icon" href="/assets/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .tv-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+            scrollbar-width: none; /* For Firefox */
+        }
+
+        .tv-slider::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, Edge */
+        }
+
+        
+        .tv-section h2 {
+          color: white;
+          margin-left: 10px;
+        }
+        
+        .tv-slider {
+          display: flex;
+          overflow-x: auto;
+          gap: 10px;
+          padding: 10px;
+        }
+        
+        .tv-card {
+          flex: 0 0 auto;
+          width: 150px;
+          color: white;
+          text-align: center;
+        }
+        
+        .tv-card img {
+          width: 100%;
+          border-radius: 10px;
+        }
+        .tv-card img:hover {
+          transform: scale(1.2);
+          transition: transform 0.3s ease;
+        }
+
+        </style>
+        
+</head>
+<body>
+    <div class="main-container">
+        <div class="menu-container">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+            <img src="/assets/logo.png" alt="Logo">
+            <button class="upgrade-button">Upgrade ></button>
+            <div class="menu">
+                <a href="/user/home"><i class="fa-solid fa-house"><span class="menu-list" >Home</span></i></a>
+                <a href="/user/search"><i class="fa-solid fa-magnifying-glass"><span class="menu-list" >Search</span></i></a>
+                <a href="/user/tv-shows"><i class="fa-solid fa-tv"><span class="menu-list">TV</span></i></a>
+                <a href="/user/movies"><i class="fa-solid fa-film"><span class="menu-list">Movies</span></i></a>
+                <a href="#"><i class="fa-solid fa-person-running"><span class="menu-list">Sports</span></i></a>
+                <a href="#"><i class="fa-solid fa-newspaper"></i><span class="menu-list">News</span></a>
+                <a href="#"><i class="fa-solid fa-id-card"></i><span class="menu-list">Categories</span></a>
+                <a href="#"><img src="/assets/user.png" alt="user"></a>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="aid-contanier">
+                <img src="/assets/aidBanner.jpg" alt="mycircle" id="aid" class="aid-photo">
+                <div class="aid-detail">
+                    <div class="details">
+                        <img id="idlogo"src="../assets/mycircle.png" alt="">
+                        <div class="AD" style="margin: 6px 0 0 8px;">
+                            <p><span style="background-color: rgba(233, 196, 13, 0.856);color:rgb(114, 75, 31);padding: 2px;font-weight: 700;">AD</span> My11Circle</p>
+                            <p style="margin-top: 3px; color: rgba(255, 255, 255, 0.5);">Win 1st Price &#8377;3 crore</p>
+                        </div>
+                    </div>
+                    <p id="aidP">Make Your Team Now</p>
+                    <button id="aidBtn" style="border:none; border-radius: 10px;font-size: 20px;">Get Offer</button>
+                </div>
+            </div>
+            <div class="content-container">
+                <img src="/assets/element.jpg" alt="" class="video-background " id="movie-video" >
+                <!-- <video id="main-video" class="video-background " autoplay muted >
+                    <source id="movie-video" src="assets/element.mp4" type="video/mp4">
+                </video> -->
+                <div class="movie-details">
+                    <img id ="movie-title" src="/assets/movieName.png" alt="movieName">
+                    <p class="info" id="info1">2025 &bull; <span class ="U">U/A 8+</span> &bull; 1h 41m &bull; 2 Languages</p>
+                    <p id="info2">Fiery Ember is tested when she meets go-with-the-flow Wade in Element City.</p>
+                    <p class="info" id="info3">Comedy | Family | Animation | Kids</p>
+                    <button class="watch-now" >Watch Now</button> 
+                </div>
+                <button id="muted"><span class="material-symbols-outlined" style="display: none;">
+                    volume_up
+                    </span>
+                </button>
+                
+                <div class="trending-movies">
+                    
+                    <img class="trending-movie" src="/assets/CocoPhoto.jpg" alt="Trending Movie 1" movie-type ="Family | Fantasy" data-video="/assets/CocoPhoto.jpg" data-title="/assets/cocoName.png" movie_name="coco" data-info="2017 &bull; <span class ='U'>U/A 10+</span> &bull; 1h 45m &bull; 4 Languages" data-description="Miguel is confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.">
+                    <img class="trending-movie" src="/assets/LightYear.jpg" alt="Trending Movie 1" movie-type ="Action | Thriller " data-video="/assets/LightYear.jpg" data-title="/assets/LightYear.png" movie_name="LightYear" data-info="2024 &bull;<span class ='U'>U/A 16+</span> &bull; 2h 30m &bull;  8 Languages" data-description="A reckless yet brilliant squadron leader and his team of elite fighter pilots face mortal dangers and inner demons as they unite for a deadly mission.">
+                    <img class="trending-movie" src="/assets/redShowes.jpg" alt="Trending Movie 2" movie-type ="Animation | Family " data-video="/assets/redShowes.jpg" data-title="/assets/redShowes.png" movie_name="red Shoes and seven Dwarfs" data-info="2019 &bull;<span class ='U'>U/A 13+</span> &bull; 1h 32m &bull; 4 Languages" data-description="Princes who have been turned into Dwarfs seek the red shoes of a lady in order to break the spell, although it will not be easy. A parody with a twist.">
+                    <img class="trending-movie" src="/assets/1921Movie.jpg" alt="Trending Movie 3" movie-type ="Horror | Romance  " data-video="/assets/1921Movie.jpg" data-title="/assets/1921.png" movie_name="1921" data-info="2018 &bull; <span class ='U'>U/A 15+</span>&bull; 2h 24m &bull; 2 Languages" data-description="1921 ... After moving into a mansion, young pianist Ayush gets haunted by an evil entity. To ward off the spirit, he seeks a psychic's help. And terror follows!">
+                    <img class="trending-movie" src="/assets/element.jpg" alt="Trending Movie 1" movie-type ="Comedy | Family | Animation | Kids" data-video="/assets/element.jpg" data-title="/assets/movieName.png" movie_name="Elemental" data-info="2025 &bull; <span class ='U'>U/A 8+</span> &bull; 1h 41m &bull; 2 Languages" data-description="Fiery Ember is tested when she meets go-with-the-flow Wade in Element City.">
+                </div>
+            </div>
+            <div id="tv-show-sections" style="margin-left: 8%;">../
+                <!-- Sections will be inserted here dynamically -->
+              </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+    
+
+ <script>
+    function toggleMenu() {
+        document.querySelector('.menu').classList.toggle('show');
+    }
+    const apiKey = 'e672a5da20da266f2e2c153bcd39886b';
+    
+const tvSections = [
+  { title: "Trending in India", url: `https://api.themoviedb.org/3/trending/tv/week?api_key=${apiKey}&region=IN` },
+  { title: "Popular US Shows", url: `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&region=US` },
+  { title: "Top Rated Shows", url: `https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}` },
+  { title: "Airing Today in India", url: `https://api.themoviedb.org/3/tv/airing_today?api_key=${apiKey}&region=IN` },
+];
+
+const sectionContainer = document.getElementById('tv-show-sections');
+
+tvSections.forEach(section => {
+  fetch(section.url)
+    .then(res => res.json())
+    .then(data => {
+      const shows = data.results;
+      const sectionHTML = `
+        <div class="tv-section">
+          <h2>${section.title}</h2>
+          <div class="tv-slider">
+            ${shows.map(show => `
+              <div class="tv-card">
+                  <img src="https://image.tmdb.org/t/p/w500${show.poster_path}" alt="${show.name}"  onclick="window.location.href='/user/movieShow?title=${encodeURIComponent(show.name)}'"/>
+                
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+      sectionContainer.insertAdjacentHTML('beforeend', sectionHTML);
+    })
+    .catch(err => console.error(err));
+});
+</script>
+
+    
+</body>
+</html>
