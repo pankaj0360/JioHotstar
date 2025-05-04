@@ -10,20 +10,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
     <link rel="stylesheet" href="/style.css">
     <style>
-        body {
+ /* Global box-sizing fix */
+* {
+  box-sizing: border-box;
+}
+
+body {
   background: #000;
   color: white;
   font-family: sans-serif;
-  padding: 20px;
+  /* padding: 20px; */
 }
- 
+
+/* Prevent unwanted scrollbars */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .movie-section h2 {
   margin-bottom: 5px;
 }
+
 .movies-wrapper {
   display: flex;
   overflow-x: auto;
-  
+  gap: 10px;
 
   /* Hide scrollbar */
   scrollbar-width: none; /* Firefox */
@@ -36,14 +49,51 @@
 
 .movie-card {
   width: 200px;
-  height: 280px;
-  cursor: pointer;
+  height: 250px;
+  text-align: center;
 }
+
 .movie-card img {
-  width: 80%;
-  height: calc(100% - 30px);
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
+
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .movie-card {
+    width: 170px;
+    height: 200px;
+  }
+  .movie-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+}
+
+/* Phone responsiveness */
+@media (max-width: 480px) {
+  .movie-card {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 220px;
+    text-align: center;
+  }
+
+  .movie-card img {
+    width: 150px;
+    height: 220px;
+    object-fit: cover; /* Prevent stretching */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+
 
 
     </style>
@@ -72,6 +122,39 @@
             
             <div id="movie-sections"></div>
         </div>
+        <div class="footer-container">
+          <div class="main-footer">
+               <div class="footer">
+                   <h3>Company</h3>
+                   <p>About Us</p>
+                   <p>Careers</p>
+               </div>
+               <div class="footer">
+                   <h3>View website in</h3>
+                   <p><span style="margin-right:7px ;">&check;</span>English</p>
+               </div>
+               <div class="footer">
+                   <h3>Need help</h3>
+                   <p>Visit help center</p>
+                   <p>Share Feedback</p>
+               </div>
+               <div class="footer">
+                   <h3>Contect with us</h3>
+                   <i class="fa-brands fa-facebook-f"></i>
+                   <i class="fa-brands fa-x-twitter"></i>
+               </div>
+          </div>
+          <div class="copyright-container">
+              <div class="copyright-details">
+                  <p>© 2025 STAR. All Rights Reserved.</p>
+                  <p>Terms Of Use&nbsp;  &nbsp;Privacy Policy&nbsp;  &nbsp;FAQ</p>
+              </div>
+              <div class="download-link">
+                  <a href="https://play.google.com/"><img src="/assets/playstore.png" alt="Playstore"></a>
+                  <a href="https://www.apple.com/"><img src="/assets/appstore.png" alt="Appstore"></a>
+              </div>
+          </div>
+       </div>
      </div>
      <script src="/movies.js"></script>
 </body>

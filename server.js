@@ -6,7 +6,7 @@ const dbCon = require("./config/databaseConnection");
 dbCon();
 const encoder = require("express").urlencoded({extended:false});
 app.use(encoder);
-app.use(express.static(path.join(__dirname, "assets")));
+app.use("/assets",express.static(path.join(__dirname, "assets")));
 app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
