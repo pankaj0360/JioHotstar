@@ -20,7 +20,9 @@ const userRegister = async(request, response)=>{
   
         await newUser.save();
         const token =  jwt.sign({email}, JWT_secret, {expiresIn:"10m"});
-        const verificationLink = `https://jiohotstarworking.onrender.com/user/verify-email?token=${token}`;
+        const host = req.get('host');
+        const verificationLink = `https://${host}/user/verify-email?token=${token}`;
+
         sendMail.sendMailer(email, verificationLink, firstName);
 
         console.log("Registration Success, please verify your email to login");
