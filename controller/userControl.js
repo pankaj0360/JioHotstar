@@ -20,7 +20,7 @@ const userRegister = async(request, response)=>{
   
         await newUser.save();
         const token =  jwt.sign({email}, JWT_secret, {expiresIn:"10m"});
-        const verificationLink = `http://localhost:3000/user/verify-email?token=${token}`;
+        const verificationLink = `/user/verify-email?token=${token}`;
         sendMail.sendMailer(email, verificationLink, firstName);
 
         console.log("Registration Success, please verify your email to login");
