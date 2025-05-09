@@ -92,7 +92,7 @@ const userForgotPassword = async (request, response) => {
   if (user) {
     const name = user.firstName;
     const token = jwt.sign({ email: email }, JWT_secret, { expiresIn: "5m" });
-    const resetLink = `http://localhost:3000/user/change-password?token=${token}`;
+    const resetLink = `https://jiohotstarworking.onrender.com/user/change-password?token=${token}`;
     sendMail.sendMailer(email, resetLink, name);
     console.log("Password reset link sent to your email");
     response.redirect("/user/login");
