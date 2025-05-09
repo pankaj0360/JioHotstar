@@ -13,10 +13,11 @@ app.set("views", path.join(__dirname, "views"));
 app.listen(process.env.PORT,()=>{
   console.log("server is running on port 3000");
 });
+const movieRouter = require("./routes/movieRoute");
 const appRouter = require("./routes/appRoute");
 const userRouter = require("./routes/userRoute");
 
 app.use("/api", appRouter);
 app.use("/user",userRouter);
-
+app.use("/api/home", movieRouter);
 // esxd ruur igfe zjji

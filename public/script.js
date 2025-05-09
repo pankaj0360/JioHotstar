@@ -78,57 +78,22 @@ document.addEventListener("DOMContentLoaded", () => {
     
 });
 document.addEventListener("DOMContentLoaded", async () => {
-    await fetch("/movie.json")
-    .then(response => response.json())
-    .then(data => {
-        loadMovies("Comedy_Carnival", data.Comedy_Carnival, "comedy-container");
-       
-        
-        loadMovies("Latest_Releases", data.Latest_Releases, "latest-container");
-        loadMovies("Team_Marvel_And_Team_DC", data.Team_Marvel_And_Team_DC, "Super-container");
-        loadMovies("Popular_in_Biopic", data.Popular_in_Biopic, "Biopic-container");
-        loadMovies("Action_Movies", data.Action_Movies, "Action_Movies-container");
-        loadMovies("Popular_Shows", data.Popular_Shows, "Shows-container");
-        loadChannel("News_Channel", data.News_Channel, "News-container");
-    
-    
-        // Wait for DOM update, then initialize sliders
-        
-        document.querySelectorAll(".slider-container").forEach(slider => initializeSlider(slider));
-        
-    });
-    
-    
+    await fetch("/api/home")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("comedy-container").innerHTML = data.Comedy_Carnival;
+            document.getElementById("latest-container").innerHTML = data.Latest_Releases;
+            document.getElementById("Super-container").innerHTML = data.Team_Marvel_And_Team_DC;
+            document.getElementById("Biopic-container").innerHTML = data.Popular_in_Biopic;
+            document.getElementById("Action_Movies-container").innerHTML = data.Action_Movies;
+            document.getElementById("Shows-container").innerHTML = data.Popular_Shows;
+            document.getElementById("News-container").innerHTML = data.News_Channel;
+
+            // Initialize sliders once all content is loaded
+            document.querySelectorAll(".slider-container").forEach(slider => initializeSlider(slider));
+        });
 });
 
-function loadMovies(category, movies, containerId) {
-    const container = document.getElementById(containerId);
-    const movieHTML = movies.map(movie => `
-        <div class="movie-cardd">
-            <img 
-                src="${movie.image}" 
-                alt="${movie.title}" 
-                onclick="window.location.href='/user/movieShow?title=${encodeURIComponent(movie.title)}'"
-                style="aspect-ratio: 19/6;"
-            />
-        </div>
-    `).join(""); 
-    container.innerHTML = movieHTML;
-}
-function loadChannel(category, movies, containerId) {
-    const container = document.getElementById(containerId);
-    const movieHTML = movies.map(movie => `
-        <div class="movie-cardd">
-            <img 
-                src="${movie.image}" 
-                alt="${movie.title}" 
-                onclick="window.location.href='https://www.youtube.com/embed/live_stream?channel=${movie.channelId}&autoplay=1'"
-                style="aspect-ratio: 19/6;"
-            />
-        </div>
-    `).join(""); 
-    container.innerHTML = movieHTML;
-}
 function initializeSlider(sliderContainer) {
     const movieCards = sliderContainer.querySelector(".movie-cardss");
     if (!movieCards) return;

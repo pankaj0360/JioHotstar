@@ -8,9 +8,9 @@ userRouter.get("/login", (request, response) => {
 userRouter.get("/signUp", (request, response) => {
   response.sendFile(path.join(__dirname, "../public", "signUp.html"));
 });
-userRouter.get("/home", (request, response) => {
-  response.sendFile(path.join(__dirname, "../public", "home.html"));
-});
+// userRouter.get("/home", (request, response) => {
+//   response.sendFile(path.join(__dirname, "../public", "home.html"));
+// });
 userRouter.get("/verify-email", (request, response) => {
   if(userVerification(request.query.token)){
     response.redirect("/user/login")
